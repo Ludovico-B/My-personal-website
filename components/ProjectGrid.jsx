@@ -56,10 +56,10 @@ const ProjectGrid = () => {
             link: 'https://github.com/Ludovico-B/Shifts-Scheduler'
         },
         {
-            title: 'Work in progress',
-            description: 'Work in progress',
-            tags: ['Work in progress'],
-            link: 'https://github.com'
+            title: 'Forecasting Meta Prophet',
+            description: 'A program for forecasting sales using Meta Prophet Machine Learning.',
+            tags: ['Python', 'Meta Prophet', 'Machine Learning'],
+            link: 'https://github.com/Ludovico-B/Forecastin-Meta-Prophet'
         }
     ];
 
