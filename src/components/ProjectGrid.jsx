@@ -50,6 +50,12 @@ const ProjectCard = ({ title, description, tags, link }) => (
 const ProjectGrid = () => {
     const projects = [
         {
+            title: 'Luce Connessa Impianti',
+            description: 'Landing page for an Italian company that deals with electrical systems, photovoltaic systems, air conditioning systems and security systems.',
+            tags: ['Node.js', 'Next.js', 'Tailwind CSS', 'TypeScript'],
+            link: 'https://github.com/Ludovico-B/UI-UX-Design-Luce-s-Company'
+        },
+        {
             title: 'Shifts Scheduler',
             description: 'A webapp for managing shifts for employees with a focus on user experience and ease of use, main feature is AI that learns from past shifts and create new ones.',
             tags: ['React', 'Node.js', 'Tailwind CSS'],

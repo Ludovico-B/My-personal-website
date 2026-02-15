@@ -1,8 +1,22 @@
 import React from 'react';
 
 const Hero = () => {
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ludovico Barberis",
+        "jobTitle": "Software Developer & Data Analyst",
+        "url": "https://ludovicobarberis.it",
+        "sameAs": [
+            "https://github.com/Ludovico-B"
+        ]
+    };
+
     return (
         <section className="section">
+            <script type="application/ld+json">
+                {JSON.stringify(structuredData)}
+            </script>
             <h1 className="text-huge" style={{ marginBottom: '1rem' }}>
                 Ludovico Barberis
             </h1>

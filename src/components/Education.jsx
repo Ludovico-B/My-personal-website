@@ -27,7 +27,7 @@ const Education = () => {
         },
         {
             degree: 'Diploma di Amministrazione Finanza e Marketing',
-            school: 'Istituo Dalla Chiesa Spinelli',
+            school: 'Istituto Dalla Chiesa Spinelli',
             period: '2016 - 2021',
             description: 'Diploma di maturità economico-aziendale.',
         }
