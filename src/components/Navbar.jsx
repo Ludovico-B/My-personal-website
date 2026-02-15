@@ -53,7 +53,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <nav aria-label="Navigazione principale" style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div
                 style={{ position: 'relative', display: 'flex', gap: '2rem' }}
                 onMouseLeave={handleMouseLeave}
