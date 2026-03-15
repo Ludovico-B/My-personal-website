@@ -64,7 +64,7 @@ const ProjectGrid = () => {
         {
             title: 'Shifts Scheduler',
             description: 'A webapp for managing shifts for employees with a focus on user experience and ease of use, main feature is AI that learns from past shifts and create new ones.',
-            tags: ['React', 'Node.js', 'Tailwind CSS'],
+            tags: ['Python', 'Node.js', 'React', 'Tailwind CSS', 'AI'],
             link: 'https://github.com/Ludovico-B/Shifts-Scheduler'
         },
         {
