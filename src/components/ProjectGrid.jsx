@@ -50,6 +50,12 @@ const ProjectCard = ({ title, description, tags, link }) => (
 const ProjectGrid = () => {
     const projects = [
         {
+            title: 'La Barberia al Barbe',
+            description: 'A Professional Website for a Barbershop in Omegna, landing page for only the view and contact to booking a reservation.',
+            tags: ['Node.js', 'Tailwind CSS', 'TypeScript', 'Vite', 'React'],
+            link: 'https://github.com/Ludovico-B/LaBarberiaAlBarbe-website'
+        },
+        {
             title: 'Luce Connessa Impianti',
             description: 'Landing page for an Italian company that deals with electrical systems, photovoltaic systems, air conditioning systems and security systems.',
             tags: ['Node.js', 'Next.js', 'Tailwind CSS', 'TypeScript'],
