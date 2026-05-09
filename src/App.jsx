@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Gear from './pages/Gear';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/gear" element={<Gear />} />
           </Routes>
         </main>
         <Footer />

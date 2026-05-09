@@ -23,7 +23,7 @@ const Hero = () => {
                 Ludovico Barberis
             </h1>
             <p className="text-large" style={{ marginBottom: '2rem', opacity: 0.8, fontWeight: 600 }}>
-                Software Developer & Data Analyst
+                Software Developer
             </p>
             <p className="text-medium" style={{ maxWidth: '600px', lineHeight: '1.4' }}>
                 Sono uno studente di Informatica, qui mostro i miei prototipi, progetti e lavori. Mi piace creare esperienze digitali con un focus su minimalismo, prestazioni e codice pulito. La mia passione è risolvere problemi complessi con soluzioni semplici.

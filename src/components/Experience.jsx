@@ -14,13 +14,13 @@ const ExperienceItem = ({ role, company, period, description }) => (
 const Experience = () => {
     const experiences = [
         {
-            role: 'Data Analyst',
+            role: 'Junior Data specialist & Web Developer',
             company: 'Sportway',
             period: '2025 - Present',
-            description: 'Analisi dei dati di vendita, reportistica, dashboarding e supporto alle decisioni di business. Creazione di prototipi e software per utilizzo interno.',
+            description: 'Analisi dei dati, reportistica e dashboarding. Creazione di prototipi e software per utilizzo interno. Gestione dei siti Web',
         },
         {
-            role: 'Tecnico Smartphone e PC',
+            role: 'Tecnico Smartphone & PC',
             company: 'PhoneLab',
             period: '2024 - 2025',
             description: 'Assistenza tecnica su smartphone e PC, riparazioni hardware e software, gestione del magazzino e supporto clienti.',

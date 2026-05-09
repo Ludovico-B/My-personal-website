@@ -10,7 +10,8 @@ const Navbar = () => {
     // Add paths here
     const links = [
         { path: '/', label: 'Home' },
-        { path: '/about', label: 'About Me' }
+        { path: '/about', label: 'About Me' },
+        { path: '/gear', label: 'Gear' }
     ];
 
     const activeIndex = links.findIndex(link => link.path === location.pathname);
