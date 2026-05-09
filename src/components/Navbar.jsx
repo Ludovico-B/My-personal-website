@@ -56,7 +56,7 @@ const Navbar = () => {
     return (
         <nav aria-label="Navigazione principale" style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div
-                style={{ position: 'relative', display: 'flex', gap: '2rem' }}
+                className="nav-container"
                 onMouseLeave={handleMouseLeave}
                 ref={navRef}
             >
@@ -83,17 +83,11 @@ const Navbar = () => {
                         <Link
                             key={link.path}
                             to={link.path}
+                            className="nav-link"
                             ref={el => linkRefs.current[index] = el}
                             onMouseEnter={() => handleMouseEnter(index)}
                             style={{
-                                fontSize: '1.25rem',
-                                fontWeight: 600,
-                                textDecoration: 'none',
                                 color: isActive ? '#000000' : '#666666',
-                                padding: '0.5rem 1rem',
-                                position: 'relative',
-                                zIndex: 1,
-                                transition: 'color 0.2s',
                             }}
                         >
                             {link.label}
