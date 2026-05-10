@@ -3,6 +3,7 @@ import GearCard from '../components/GearCard';
 
 const Gear = () => {
     useEffect(() => {
+        document.title = 'Gear | Ludovico Barberis - Strumenti e Setup';
         window.scrollTo(0, 0);
     }, []);
 
