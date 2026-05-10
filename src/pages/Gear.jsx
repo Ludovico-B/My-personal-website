@@ -70,8 +70,41 @@ const Gear = () => {
             description: 'Per archiviare i miei progetti e collaborare con altri sviluppatori.',
             tags: ['Software'],
             link: 'https://www.github.com/',
-            image: '/img/Github-logo.png',
+            image: '/img/github-logo.png',
             category: 'App Setup'
+        },
+        // AI
+        {
+            title: 'Perplexity',
+            description: 'Il mio motore di ricerca potenziato dall\'AI per ricerche veloci e verificate.',
+            tags: ['AI', 'Search'],
+            link: 'https://www.perplexity.ai/',
+            image: '/img/perplexity-logo.png',
+            category: 'AI'
+        },
+        {
+            title: 'Nano Banana App',
+            description: 'Strumento incredibile per la generazione di immagini e ispirazione visuale.',
+            tags: ['AI', 'Design'],
+            link: 'https://www.nanobanana.app/',
+            image: '/img/nanobanana-logo.png',
+            category: 'AI'
+        },
+        {
+            title: 'Opencode Terminal',
+            description: 'Un terminale potenziato dall\'IA per l\'automazione di compiti complessi.',
+            tags: ['AI', 'Sviluppo'],
+            link: 'https://opencode.com/',
+            image: '/img/opencode-logo.png',
+            category: 'AI'
+        },
+        {
+            title: 'Kuse Coworking',
+            description: 'Il mio agente AI personale per gestire la mia produttività quotidiana.',
+            tags: ['AI', 'Sviluppo'],
+            link: 'https://kuse.it/',
+            image: '/img/kuse-coworking-logo.png',
+            category: 'AI'
         },
         // Everyday carry
         {
@@ -118,6 +151,7 @@ const Gear = () => {
 
     const deskSetup = gearItems.filter(item => item.category === 'Desk Setup');
     const appSetup = gearItems.filter(item => item.category === 'App Setup');
+    const aiSetup = gearItems.filter(item => item.category === 'AI');
     const everydayCarry = gearItems.filter(item => item.category === 'Everyday carry');
 
     return (
@@ -151,6 +185,18 @@ const Gear = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2" style={{ display: 'grid', gap: '1.5rem' }}>
                     {appSetup.map((item, index) => (
                         <GearCard key={`app-${index}`} {...item} />
+                    ))}
+                </div>
+            </section>
+
+            {/* AI Section */}
+            <section style={{ marginBottom: '5rem' }}>
+                <h2 className="text-medium" style={{ marginBottom: '2rem', fontWeight: 600 }}>
+                    AI Tools
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ display: 'grid', gap: '1.5rem' }}>
+                    {aiSetup.map((item, index) => (
+                        <GearCard key={`ai-${index}`} {...item} />
                     ))}
                 </div>
             </section>

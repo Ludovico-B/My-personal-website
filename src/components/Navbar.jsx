@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const location = useLocation();
@@ -69,7 +70,7 @@ const Navbar = () => {
                         left: `${pillStyle.left}px`,
                         width: `${pillStyle.width}px`,
                         opacity: pillStyle.opacity,
-                        backgroundColor: '#E5E5E5',
+                        backgroundColor: 'var(--nav-bg)',
                         borderRadius: '8px',
                         transition: 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)',
                         zIndex: 0,
@@ -87,13 +88,17 @@ const Navbar = () => {
                             ref={el => linkRefs.current[index] = el}
                             onMouseEnter={() => handleMouseEnter(index)}
                             style={{
-                                color: isActive ? '#000000' : '#666666',
+                                color: isActive ? 'var(--nav-text-active)' : 'var(--nav-text)',
                             }}
                         >
                             {link.label}
                         </Link>
                     )
                 })}
+            </div>
+            
+            <div style={{ marginLeft: '1rem' }}>
+                <ThemeToggle />
             </div>
         </nav>
     );

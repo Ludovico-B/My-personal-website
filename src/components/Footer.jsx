@@ -10,9 +10,9 @@ const FooterLink = ({ href, children }) => (
             alignItems: 'center',
             gap: '0.5rem',
             padding: '0.75rem 1.5rem',
-            backgroundColor: '#F3F4F6', // Light gray background
-            borderRadius: '9999px', // Pill shape
-            color: '#111827', // Dark text
+            backgroundColor: 'var(--footer-bg)',
+            borderRadius: '9999px',
+            color: 'var(--footer-text)',
             textDecoration: 'none',
             fontWeight: 500,
             fontSize: '1rem',
@@ -20,12 +20,12 @@ const FooterLink = ({ href, children }) => (
             border: '1px solid transparent'
         }}
         onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#E5E7EB'; // Slightly darker on hover
+            e.currentTarget.style.backgroundColor = 'var(--footer-hover)';
             e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.borderColor = '#D1D5DB';
+            e.currentTarget.style.borderColor = 'var(--footer-border)';
         }}
         onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#F3F4F6';
+            e.currentTarget.style.backgroundColor = 'var(--footer-bg)';
             e.currentTarget.style.transform = 'scale(1)';
             e.currentTarget.style.borderColor = 'transparent';
         }}

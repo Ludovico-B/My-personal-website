@@ -11,7 +11,7 @@ const GearCard = ({ title, description, link, image }) => {
                 gap: '1rem',
                 padding: '0.75rem',
                 borderRadius: '16px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'var(--card-bg)',
                 transition: 'background-color 0.2s ease',
             }}
         >
@@ -26,7 +26,7 @@ const GearCard = ({ title, description, link, image }) => {
                             height: '72px', 
                             borderRadius: '18px', 
                             objectFit: 'cover',
-                            border: '1px solid rgba(0,0,0,0.05)'
+                            border: '1px solid var(--card-border)'
                         }} 
                     />
                 ) : (
@@ -34,13 +34,13 @@ const GearCard = ({ title, description, link, image }) => {
                         width: '72px', 
                         height: '72px', 
                         borderRadius: '18px', 
-                        backgroundColor: '#f0f0f0',
+                        backgroundColor: 'var(--placeholder-bg)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        border: '1px solid rgba(0,0,0,0.05)'
+                        border: '1px solid var(--card-border)'
                     }}>
-                        <span style={{ opacity: 0.3, fontSize: '0.8rem' }}>Img</span>
+                        <span style={{ opacity: 0.3, fontSize: '0.8rem', color: 'var(--text-color)' }}>Img</span>
                     </div>
                 )}
             </div>
@@ -60,7 +60,7 @@ const GearCard = ({ title, description, link, image }) => {
                 <p style={{ 
                     margin: 0, 
                     fontSize: '0.9rem', 
-                    color: '#666', 
+                    color: 'var(--text-muted)', 
                     lineHeight: 1.4,
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
@@ -83,10 +83,10 @@ const GearCard = ({ title, description, link, image }) => {
                         display: 'inline-block',
                         padding: '0.4rem 1.2rem',
                         borderRadius: '999px',
-                        backgroundColor: isButtonHovered ? '#D1D1D1' : '#f1f1f1',
+                        backgroundColor: isButtonHovered ? 'var(--btn-bg-hover)' : 'var(--btn-bg)',
                         fontSize: '0.9rem',
                         fontWeight: 600,
-                        color: '#000',
+                        color: 'var(--btn-text)',
                         textDecoration: 'none',
                         transition: 'all 0.2s ease',
                         cursor: 'pointer'
