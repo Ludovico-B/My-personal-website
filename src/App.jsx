@@ -4,8 +4,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Gear from './pages/Gear';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 import { ThemeProvider } from './context/ThemeContext';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
               <Route path="/gear" element={<Gear />} />
             </Routes>
           </main>
+          <SpeedInsights />
           <Footer />
         </div>
       </Router>
