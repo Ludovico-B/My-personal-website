@@ -10,13 +10,15 @@ Il sito è un'applicazione web Single Page Application (SPA) che funge da vetrin
 
 *   **Design Neo-brutalism**: Un'estetica minimalista estrema, pulita, con forte contrasto (bianco/nero) e tipografia audace.
 *   **Portfolio Progetti**: Una griglia curata di card interattive che rimandano ai repository GitHub dei miei progetti.
-*   **Navigazione Fluida**: Routing lato client per un'esperienza utente istantanea tra le sezioni "Home" e "About Me".
+*   **Navigazione Fluida**: Routing lato client per un'esperienza utente istantanea tra le sezioni "Home", "About Me" e "Gear".
 *   **Animazioni Interattive**:
     *   Navbar con effetto "pillola" scorrevole che segue l'hover del mouse.
     *   Card dei progetti con effetti di elevazione e ombra al passaggio del mouse.
     *   Link contatti con stile a pillola e animazione di scaling.
+    *   Menu a tendina per il selettore del tema con effetto *glassmorphism*.
 *   **Sezione "About Me" Completa**: Include timeline delle esperienze lavorative, lista delle competenze tecniche e percorso formativo.
-*   **Responsività**: Layout completamente ottimizzato per dispositivi mobili e desktop.
+*   **Pagina "Gear"**: Una vetrina personale dedicata al mio setup quotidiano, divisa in categorie: Desk Setup, App Setup, AI Tools ed Everyday Carry.
+*   **Supporto Dark Mode**: Un *Theme Switcher* integrato nella Navbar per alternare le modalità Chiaro, Scuro e Sistema (che si adatta alle preferenze dell'OS), gestito tramite Context API.
 
 ## 🛠️ Tecnologie e Framework
 
@@ -25,7 +27,7 @@ Il progetto è costruito utilizzando un moderno stack tecnologico per garantire 
 *   **[React](https://react.dev/)**: Libreria JavaScript per la costruzione dell'interfaccia utente.
 *   **[Vite](https://vitejs.dev/)**: Build tool di nuova generazione per un ambiente di sviluppo rapido.
 *   **[React Router](https://reactrouter.com/)**: Gestione del routing e della navigazione all'interno dell'applicazione.
-*   **Vanilla CSS**: Styling personalizzato basato su variabili CSS per un controllo totale del design system senza dipendenze pesanti.
+*   **Vanilla CSS**: Styling personalizzato basato su variabili CSS per un controllo totale del design system e gestione fluida della Dark Mode senza dipendenze pesanti.
 *   **[Lucide React](https://lucide.dev/)**: Libreria di icone SVG leggere e personalizzabili.
 
 ## 💻 Installazione e Avvio Locale
