@@ -70,7 +70,7 @@ const Gear = () => {
             description: 'Per archiviare i miei progetti e collaborare con altri sviluppatori.',
             tags: ['Software'],
             link: 'https://www.github.com/',
-            image: '/img/github-logo.png',
+            image: '/img/Github-logo.png',
             category: 'App Setup'
         },
         // AI
