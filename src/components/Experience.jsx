@@ -14,7 +14,7 @@ const ExperienceItem = ({ role, company, period, description }) => (
 const Experience = () => {
     const experiences = [
         {
-            role: 'Junior Data specialist & Web Developer',
+            role: 'Junior Data Specialist',
             company: 'Sportway',
             period: '2025 - Present',
             description: 'Analisi dei dati, reportistica e dashboarding. Creazione di prototipi e software per utilizzo interno. Gestione dei siti Web',
