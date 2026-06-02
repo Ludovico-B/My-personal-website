@@ -50,10 +50,16 @@ const ProjectCard = ({ title, description, tags, link }) => (
 const ProjectGrid = () => {
     const projects = [
         {
-            title: 'La Barberia al Barbe',
-            description: 'A Professional Website for a Barbershop in Omegna, landing page for only the view and contact to booking a reservation.',
-            tags: ['Node.js', 'Tailwind CSS', 'TypeScript', 'Vite', 'React'],
-            link: 'https://github.com/Ludovico-B/LaBarberiaAlBarbe-website'
+            title: 'Dahsboard Data Analysis Custom',
+            description: 'Dashboard for data analysis, custom to the user and with a great user experience, made for warehouse and sales analysis for a clothing store.',
+            tags: ['Python', 'Pandas', 'Streamlit', 'Plotly', 'Openpyxl'],
+            link: 'https://github.com/Ludovico-B/Dashoboard-Analisi-Custom'
+        },
+        {
+            title: 'Personal Website',
+            description: 'This is my personal website, my CV. I designed and developed it to showcase my skills, gear, and projects.',
+            tags: ['Node.js', 'React.js', 'Tailwind CSS', 'TypeScript', 'Vite'],
+            link: 'https://github.com/Ludovico-B/My-personal-website'
         },
         {
             title: 'Luce Connessa Impianti',
@@ -72,7 +78,13 @@ const ProjectGrid = () => {
             description: 'A program for forecasting sales using Meta Prophet Machine Learning.',
             tags: ['Python', 'Meta Prophet', 'Machine Learning'],
             link: 'https://github.com/Ludovico-B/Forecastin-Meta-Prophet'
-        }
+        },
+        {
+            title: 'La Barberia al Barbe',
+            description: 'A Professional Website for a Barbershop in Omegna, landing page for only the view and contact to booking a reservation.',
+            tags: ['Node.js', 'Tailwind CSS', 'TypeScript', 'Vite', 'React'],
+            link: 'https://github.com/Ludovico-B/LaBarberiaAlBarbe-website'
+        },
     ];
 
     return (
