@@ -1,48 +1,55 @@
-import React from 'react';
-
-const EducationItem = ({ degree, school, period, description }) => (
-    <div style={{ marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
-            <h3 className="text-large" style={{ fontSize: '1.5rem' }}>{degree}</h3>
-            <span className="text-small" style={{ fontFamily: 'monospace' }}>{period}</span>
-        </div>
-        <div className="text-medium" style={{ marginBottom: '0.5rem' }}>{school}</div>
-        {description && <p style={{ maxWidth: '700px', opacity: 0.8 }}>{description}</p>}
-    </div>
-);
+const education = [
+    {
+        degree: 'Informatica per le Aziende Digitali L-31',
+        school: 'Università Telematica Pegaso',
+        start: '2024',
+        end: 'in corso',
+        description: 'Laurea triennale in Informatica per le Aziende Digitali in fase di conseguimento.',
+    },
+    {
+        degree: 'Certificato Web Graphic Specialist',
+        school: 'Istituto Elvetico',
+        start: '2023',
+        end: '2024',
+        description: 'Corso di specializzazione in programmazione Web e Grafica.',
+    },
+    {
+        degree: 'Diploma di Amministrazione Finanza e Marketing',
+        school: 'Istituto Dalla Chiesa Spinelli',
+        start: '2016',
+        end: '2021',
+        description: 'Diploma di maturità economico-aziendale.',
+    }
+];
 
 const Education = () => {
-    const education = [
-        {
-            degree: 'Informatica per le Aziende Digitali L-31',
-            school: 'Università Telematica Pegaso',
-            period: '2024 - in corso',
-            description: 'Laurea triennale in Informatica per le Aziende Digitali in fase di conseguimento.',
-        },
-        {
-            degree: 'Certificato Web Graphic Specialist',
-            school: 'Istituto Elvetico',
-            period: '2023 - 2024',
-            description: 'Corso di specializzazione in programmazione Web e Grafica.',
-        },
-        {
-            degree: 'Diploma di Amministrazione Finanza e Marketing',
-            school: 'Istituto Dalla Chiesa Spinelli',
-            period: '2016 - 2021',
-            description: 'Diploma di maturità economico-aziendale.',
-        }
-    ];
-
     return (
         <section className="section">
-            <h2 className="text-large" style={{ marginBottom: '3rem', paddingBottom: '1rem' }}>
-                Formazione
-            </h2>
-            <div>
-                {education.map((edu, index) => (
-                    <EducationItem key={index} {...edu} />
-                ))}
-            </div>
+            <h2 className="section-title">Formazione</h2>
+            <table className="work-table">
+                <thead>
+                    <tr>
+                        <th>School</th>
+                        <th>Degree</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {education.map((edu) => (
+                        <tr key={edu.degree}>
+                            <td>
+                                {edu.school}
+                                <p className="work-desc">{edu.description}</p>
+                            </td>
+                            <td className="work-role">{edu.degree}</td>
+                            <td>
+                                {edu.start}{' '}
+                                {edu.end === 'in corso' ? <span className="work-present">in corso</span> : edu.end}
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </section>
     );
 };

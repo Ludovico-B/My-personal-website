@@ -1,106 +1,77 @@
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 
+const links = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/gear', label: 'Gear' },
+];
+
 const Navbar = () => {
     const location = useLocation();
-    const [pillStyle, setPillStyle] = React.useState({ left: 0, width: 0, opacity: 0 });
-    const navRef = React.useRef(null);
-    const linkRefs = React.useRef([]);
+    const [open, setOpen] = useState(false);
+    const wrapRef = useRef(null);
+    const current = links.find((link) => link.path === location.pathname) || links[0];
 
-    // Add paths here
-    const links = [
-        { path: '/', label: 'Home' },
-        { path: '/about', label: 'About Me' },
-        { path: '/gear', label: 'Gear' }
-    ];
+    useEffect(() => {
+        const onPointerDown = (event) => {
+            if (wrapRef.current && !wrapRef.current.contains(event.target)) {
+                setOpen(false);
+            }
+        };
+        const onKeyDown = (event) => {
+            if (event.key === 'Escape') setOpen(false);
+        };
+        document.addEventListener('mousedown', onPointerDown);
+        document.addEventListener('keydown', onKeyDown);
+        return () => {
+            document.removeEventListener('mousedown', onPointerDown);
+            document.removeEventListener('keydown', onKeyDown);
+        };
+    }, []);
 
-    const activeIndex = links.findIndex(link => link.path === location.pathname);
-
-    React.useEffect(() => {
-        // Set initial position to active link
-        if (activeIndex !== -1 && linkRefs.current[activeIndex]) {
-            const el = linkRefs.current[activeIndex];
-            setPillStyle({
-                left: el.offsetLeft,
-                width: el.offsetWidth,
-                opacity: 1 // Keep opacity 1 to show active state
-            });
-        }
-    }, [location.pathname, activeIndex]);
-
-    const handleMouseEnter = (index) => {
-        if (linkRefs.current[index]) {
-            const el = linkRefs.current[index];
-            setPillStyle({
-                left: el.offsetLeft,
-                width: el.offsetWidth,
-                opacity: 1
-            });
-        }
-    };
-
-    const handleMouseLeave = () => {
-        // Return to active link
-        if (activeIndex !== -1 && linkRefs.current[activeIndex]) {
-            const el = linkRefs.current[activeIndex];
-            setPillStyle({
-                left: el.offsetLeft,
-                width: el.offsetWidth,
-                opacity: 1
-            });
-        } else {
-            setPillStyle(prev => ({ ...prev, opacity: 0 }));
-        }
-    };
+    useEffect(() => {
+        setOpen(false);
+    }, [location.pathname]);
 
     return (
-        <nav aria-label="Navigazione principale" style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div
-                className="nav-container"
-                onMouseLeave={handleMouseLeave}
-                ref={navRef}
-            >
-                {/* Background Pill */}
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        bottom: 0,
-                        left: `${pillStyle.left}px`,
-                        width: `${pillStyle.width}px`,
-                        opacity: pillStyle.opacity,
-                        backgroundColor: 'var(--nav-bg)',
-                        borderRadius: '8px',
-                        transition: 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                        zIndex: 0,
-                        pointerEvents: 'none',
-                    }}
-                />
-
-                {links.map((link, index) => {
-                    const isActive = location.pathname === link.path;
-                    return (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className="nav-link"
-                            ref={el => linkRefs.current[index] = el}
-                            onMouseEnter={() => handleMouseEnter(index)}
-                            style={{
-                                color: isActive ? 'var(--nav-text-active)' : 'var(--nav-text)',
-                            }}
+        <header className="site-header">
+            <div className="site-header-inner">
+                <Link to="/" className="avatar" aria-label="Home">
+                    LB
+                </Link>
+                <div className="header-actions">
+                    <div className="nav-wrap" ref={wrapRef}>
+                        <button
+                            type="button"
+                            className="nav-pill"
+                            aria-expanded={open}
+                            aria-haspopup="true"
+                            onClick={() => setOpen((value) => !value)}
                         >
-                            {link.label}
-                        </Link>
-                    )
-                })}
+                            {current.label}
+                            <ChevronDown size={16} />
+                        </button>
+                        {open && (
+                            <nav className="nav-menu" aria-label="Navigazione principale">
+                                {links.map((link) => (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        aria-current={location.pathname === link.path ? 'page' : undefined}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                            </nav>
+                        )}
+                    </div>
+                    <ThemeToggle />
+                </div>
             </div>
-            
-            <div style={{ marginLeft: '1rem' }}>
-                <ThemeToggle />
-            </div>
-        </nav>
+        </header>
     );
 };
 

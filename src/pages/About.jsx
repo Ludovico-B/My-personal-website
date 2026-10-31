@@ -10,12 +10,17 @@ const About = () => {
 
     return (
         <>
-            <section className="section">
-                <h1 className="text-large" style={{ marginBottom: '2rem' }}>About Me</h1>
-                <p className="text-medium" style={{ maxWidth: '800px', opacity: 0.8 }}>
-                    Sono un appassionato di tutta la tecnologia. Ho iniziato a programmare per far diventare la mia passione un lavoro.
-                    Attualmente sono uno studente universitario di informatica, lavoro part-time per mettere in pratica le mie competenze. Nel tempo libero mi diverto a creare prototipi software, videogiocare e allenarmi nella corsa.
-                </p>
+            <section>
+                <h1 className="page-title">Sono un appassionato di tutta la tecnologia.</h1>
+                <div className="prose">
+                    <p>
+                        Ho iniziato a programmare per far diventare la mia passione un lavoro.
+                        Attualmente sono uno studente universitario di informatica, lavoro part-time per mettere in pratica le mie competenze.
+                    </p>
+                    <p>
+                        Nel tempo libero mi diverto a creare prototipi software, videogiocare e allenarmi nella corsa.
+                    </p>
+                </div>
             </section>
             <Experience />
             <Skills />
